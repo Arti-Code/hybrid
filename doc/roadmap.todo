@@ -1,6 +1,7 @@
 HYBRID:
     v0.1:
-        ☐ init project
-        ☐ prepare folders tree
-        ☐ setup main project frame
-        ☐ prepare icon
+        ✔ init project @done(23-03-18 23:43)
+        ✔ prepare folders tree @done(23-03-18 23:43)
+        ✔ setup main project frame @done(23-03-18 23:43)
+        ✔ prepare icon @done(23-03-18 23:43)
+        ✔ main menu sketch (ui plugin) @done(23-03-18 23:43)

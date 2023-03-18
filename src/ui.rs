@@ -1,3 +1,5 @@
+use bevy_egui::egui::RichText;
+use bevy_egui::egui::Color32;
 use crate::prelude::*;
 
 
@@ -17,57 +19,56 @@ fn main_panel_system(
     egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
         // The top panel is often a good place for a menu bar:
         egui::menu::bar(ui, |ui| {
+            ui.heading(RichText::new( "HYBRID").color(Color32::GREEN).strong().heading());
+            ui.add_space(5.0);
+            ui.separator();
+            ui.add_space(5.0);
             egui::menu::menu_button(ui, "Simulation", |ui| {
                 if ui.button("New Simulation").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Load Simulation").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Save Simulation").clicked() {
-                    std::process::exit(0);
                 }
-                if ui.button("Quit").clicked() {
+                if ui.button(RichText::new("Quit").color(Color32::RED)).clicked() {
                     std::process::exit(0);
                 }
             });
+            ui.add_space(10.0);
+            ui.separator();
+            ui.add_space(10.0);
             egui::menu::menu_button(ui, "Tools", |ui| {
                 if ui.button("Hybrid Library").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Inspector").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Hybrydizer").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Creator").clicked() {
-                    std::process::exit(0);
                 }
             });
+            ui.add_space(10.0);
+            ui.separator();
+            ui.add_space(10.0);
             egui::menu::menu_button(ui, "View", |ui| {
                 if ui.button("Real-Time Statistics").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Zoom In").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Zoom Out").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("MiniMap").clicked() {
-                    std::process::exit(0);
                 }
             });
+            ui.add_space(10.0);
+            ui.separator();
+            ui.add_space(10.0);
             egui::menu::menu_button(ui, "About", |ui| {
                 if ui.button("Documentation").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("Changes Log").clicked() {
-                    std::process::exit(0);
                 }
                 if ui.button("About").clicked() {
-                    std::process::exit(0);
                 }
             });
         });
